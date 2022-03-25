@@ -1,10 +1,10 @@
-import React from "react";
-import Form from "./UI/Form";
+import React from 'react';
+import Form from './UI/Form';
 
 const bookInfo = {
-    title: 'Dorian Gray',
-    author: 'Oscar Wilde',
-    id:1, 
+  title: 'Dorian Gray',
+  author: 'Oscar Wilde',
+  id: 1,
 };
 
 const List = () => (
@@ -16,7 +16,6 @@ const List = () => (
     <button type="button">Remove book</button>
   </li>
 );
-
 
 const Books = () => (
   <div>
