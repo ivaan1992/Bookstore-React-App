@@ -1,5 +1,5 @@
 import React from 'react';
-import Form from './UI/Form';
+import Form from './Form';
 
 const bookInfo = {
   title: 'Dorian Gray',
