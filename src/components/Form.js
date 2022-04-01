@@ -17,7 +17,7 @@ const Form = () => {
     const newBook = {
       name: title,
       author,
-      id: Math.ceil(Math.random() * 1000),
+      id: Math.ceil(Math.random() * 10000),
     };
     dispatch(addBook(newBook));
   };
