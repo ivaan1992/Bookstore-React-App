@@ -1,4 +1,4 @@
-const CATEGORIES_STATUS = 'CATEGORIES_STATUS';
+const CATEGORIES_STATUS = 'bookstore/categories/CATEGORIES_STATUS';
 
 export const categoriesStatus = () => ({
   type: CATEGORIES_STATUS,
