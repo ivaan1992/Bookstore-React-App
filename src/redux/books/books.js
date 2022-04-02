@@ -37,38 +37,40 @@ export const setAllBooks = (payload) => ({
   payload,
 });
 
-export const setAllBooksFromAPI = (dispatch) => {
+export const setAllBooksFromApi = (dispatch) => {
   booksApi.getBooksFromApi().then((data) => {
     const books = [];
     Object.entries(data).forEach(([id, info]) => {
-      const { title: APItitle } = info[0];
-      const [title, author] = APItitle.split('-');
-      const newBook = {
+      const { name: ApiTitle } = info[0];
+      const [name, author] = ApiTitle.split('-');
+      const addNewBooks = {
         id,
-        title,
+        name,
         author,
       };
-      books.push(newBook);
+      books.push(addNewBooks);
     });
     dispatch(setAllBooks(books));
   });
 };
 
-export const addBookAsync = (book) => (dispatch) => {
+export const addBooksAsync = (bookProps) => (dispatch) => {
   const {
-    id, title, author, category,
-  } = book;
-  const APIbook = {
+    id, name, author, category,
+  } = bookProps;
+
+  const ApiBook = {
     item_id: id,
-    title: `${title} - ${author}`,
+    name: `${name}`,
+    author: `${author}`,
     category: `${category}`,
   };
-  booksApi.addBooksToApi(APIbook).then(() => dispatch(addBook(book)));
+  booksApi.addBooksToApi(ApiBook).then(() => dispatch(addBook(bookProps)));
 };
 
-export const removeBookAsync = (id) => (dispatch) => {
+export const removeBooksAsync = (id) => (dispatch) => {
   booksApi.deleteBooksFromApi(id).then(() => dispatch(removeBook(id)));
-};
+}
 
 const bookReducer = (state = initialState, action) => {
   switch (action.type) {

@@ -1,13 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
-import { removeBook } from '../redux/books/books';
+import { removeBookAsync } from '../redux/books/books';
 
 const Card = (props) => {
   const { book } = props;
   const dispatchRemove = useDispatch();
   const handleRemoveBook = () => {
-    dispatchRemove(removeBook(book.id));
+    removeBookAsync(book.id)(dispatchRemove);
   };
 
   return (
@@ -28,6 +28,8 @@ Card.propTypes = {
     PropTypes.shape({
       name: PropTypes.string.isRequired,
       author: PropTypes.string.isRequired,
+      id: PropTypes.string,
+      category: PropTypes.string,
     }),
   ),
 };
