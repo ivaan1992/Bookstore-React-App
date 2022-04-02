@@ -1,19 +1,23 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
-import { removeBook } from '../redux/books/books';
+import { removeBooksAsync } from '../redux/books/books';
 
 const Card = (props) => {
   const { book } = props;
+  console.log(book);
   const dispatchRemove = useDispatch();
   const handleRemoveBook = () => {
-    dispatchRemove(removeBook(book.id));
+    removeBooksAsync(book.id)(dispatchRemove);
   };
 
   return (
-    <li key={book.id}>
+    <li className="bookInfo">
       <p>{book.name}</p>
       <p>{book.author}</p>
+      <p>{book.category}</p>
+      <p>{book.id}</p>
+
       <button type="button" onClick={handleRemoveBook}>
         Remove Book
       </button>
@@ -21,15 +25,13 @@ const Card = (props) => {
   );
 };
 
-Card.defaultProps = { book: { name: '', author: '' } };
-
 Card.propTypes = {
-  book: PropTypes.objectOf(
-    PropTypes.shape({
-      name: PropTypes.string.isRequired,
-      author: PropTypes.string.isRequired,
-    }),
-  ),
+  book: PropTypes.shape({
+    name: PropTypes.string.isRequired,
+    author: PropTypes.string.isRequired,
+    category: PropTypes.string.isRequired,
+    id: PropTypes.string.isRequired,
+  }).isRequired,
 };
 
 export default Card;
