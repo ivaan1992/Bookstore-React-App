@@ -5,12 +5,13 @@ import Card from './Card';
 
 const Books = () => {
   const BookList = useSelector((state) => state.bookReducer);
+
   return (
     <>
       <h1>Books Section</h1>
       <ul>
         {BookList.map((book) => (
-          <Card key={book.title} book={book} />
+          <Card key={book.name} book={book} />
         ))}
       </ul>
       <Form />

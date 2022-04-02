@@ -1,7 +1,23 @@
 const ADD_BOOK = 'bookstore/books/ADD_BOOK';
 const REMOVE_BOOK = 'bookstore/books/REMOVE_BOOK';
 
-const initialState = [];
+const initialState = [
+  {
+    id: 1,
+    name: 'The picture of Dorian Gray',
+    author: 'Oscar Wilde',
+  },
+  {
+    id: 2,
+    name: 'Romeo & Juliet',
+    author: 'Shakespeare',
+  },
+  {
+    id: 3,
+    name: 'The Hunger Games',
+    author: 'Suzanne Collins',
+  },
+];
 
 export const addBook = (payload) => ({
   type: ADD_BOOK,
