@@ -8,7 +8,7 @@ body {
   flex-direction: column;
   margin-left: 15rem;
   margin-right: 15rem;
-  margin-top: 10rem; 
+  margin-top: 10rem;
   margin-bottom: 10rem;
 }
 
@@ -59,7 +59,7 @@ header {
 .header-links a {
   text-decoration: none;
   color: #121212;
-  font-size: 1.200rem;
+  font-size: 1.2rem;
 }
 
 .header-links a:hover {
@@ -78,7 +78,6 @@ header {
 .booksBody {
   background: #fafafa;
   height: 100vh;
-  /*margin-top: -1.800rem; */
 }
 
 .card-complete {
@@ -87,7 +86,7 @@ header {
   background-color: #fff;
   display: flex;
   justify-content: space-between;
-  margin-bottom: 1.250rem;
+  margin-bottom: 1.25rem;
   border: 1px solid #e8e8e8;
   border-radius: 10px;
 }
@@ -112,7 +111,7 @@ header {
 
 .book-title {
   color: #121212;
-  font-size: 1.750rem;
+  font-size: 1.75rem;
   font-family: 'Roboto Slab', serif;
   font-weight: bold;
 }
@@ -253,23 +252,22 @@ div[data-anim~=base] {
   display: flex;
 }
 
- #book {
+#book {
   width: 50%;
   background-color: #fff;
- }
+}
 
- #category {
-   width: 30%;
- }
+#category {
+  width: 30%;
+}
 
- input {
+input {
   width: 20rem;
   height: 3rem;
   margin-right: 20px;
   background-color: #fff;
   border: 1px solid #e8e8e8;
   border-radius: 8px;
-
 }
 
 .Add {
@@ -285,5 +283,5 @@ div[data-anim~=base] {
 ::placeholder {
   color: #121212;
   font-weight: 500;
-  font-size: 1.250rem;
+  font-size: 1.25rem;
 }
