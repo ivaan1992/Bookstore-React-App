@@ -4,8 +4,9 @@ import '../App.css';
 
 const Header = () => (
   <header>
-    <div>
+    <div className="headerTitle">
       <ul className="header-links">
+        <h2>Bookstore CMS</h2>
         <li>
           <Link to="/">Books</Link>
         </li>

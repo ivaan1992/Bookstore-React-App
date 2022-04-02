@@ -1,6 +1,24 @@
-header {
-  display: flex;
+* {
+  font-family: 'Montserrat', sans-serif;
 }
+
+body {
+  background-color: #f5f6fa;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  width: 100%;
+  border: 3px solid #e8e8e8;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 15vh;
+  margin-bottom: 30px;
+}
+
 
 .header-links {
   display: flex;
