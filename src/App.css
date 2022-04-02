@@ -62,6 +62,10 @@ header {
   font-size: 1.200rem;
 }
 
+.header-links a:hover {
+  font-weight: bold;
+}
+
 .userdiv {
   width: 7rem;
   display: flex;
@@ -74,7 +78,7 @@ header {
 .booksBody {
   background: #fafafa;
   height: 100vh;
-  margin-top: -1.800rem;
+  /*margin-top: -1.800rem; */
 }
 
 .card-complete {
@@ -85,6 +89,7 @@ header {
   justify-content: space-between;
   margin-bottom: 1.250rem;
   border: 1px solid #e8e8e8;
+  border-radius: 10px;
 }
 
 .info {
@@ -243,16 +248,42 @@ div[data-anim~=base] {
   align-items: center;
 }
 
-
-
-
-
 .addBookForm {
+  width: 100%;
   display: flex;
-  flex-direction: column;
-  width: 15rem;
 }
 
-.addBookForm input {
-  margin-bottom: 1rem;
+ #book {
+  width: 50%;
+  background-color: #fff;
+ }
+
+ #category {
+   width: 30%;
+ }
+
+ input {
+  width: 20rem;
+  height: 3rem;
+  margin-right: 20px;
+  background-color: #fff;
+  border: 1px solid #e8e8e8;
+  border-radius: 8px;
+
+}
+
+.Add {
+  width: 15%;
+  height: 3.3rem;
+  background-color: #0290ff;
+  color: #fff;
+  font-weight: 700;
+  border-radius: 3px;
+  border: none;
+}
+
+::placeholder {
+  color: #121212;
+  font-weight: 500;
+  font-size: 1.250rem;
 }
