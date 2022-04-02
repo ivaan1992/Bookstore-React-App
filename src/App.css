@@ -6,6 +6,10 @@ body {
   background-color: #f5f6fa;
   display: flex;
   flex-direction: column;
+  margin-left: 15rem;
+  margin-right: 15rem;
+  margin-top: 10rem; 
+  margin-bottom: 10rem;
 }
 
 header {
@@ -19,6 +23,25 @@ header {
   margin-bottom: 30px;
 }
 
+.headerContent {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 10rem;
+  padding-right: 5rem;
+  color: #0290ff;
+}
+
+.titleLinks {
+  width: 50%;
+  display: flex;
+  align-items: center;
+}
+
+.titleLinks h2 {
+  font-weight: bold;
+}
 
 .header-links {
   display: flex;
@@ -27,7 +50,96 @@ header {
 .header-links li {
   margin-right: 2rem;
   list-style-type: none;
+  width: 10rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+
+.header-links a {
+  text-decoration: none;
+  color: #121212;
+  font-size: 1.200rem;
+}
+
+.userdiv {
+  width: 7rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  font-size: 2rem;
+}
+
+.booksBody {
+  background: #fafafa;
+  height: 100vh;
+  margin-top: -1.800rem;
+}
+
+.card-complete {
+  width: 100%;
+  height: 30vh;
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  border: 3px solid black;
+  margin-bottom: 1.250rem;
+}
+
+.info {
+  width: 35%;
+  border: 3px solid blue;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.bookInfo {
+  width: 100%;
+  list-style-type: none;
+}
+
+.book-category {
+  font-weight: bold;
+  color: #868383;
+}
+
+.book-title {
+  color: #121212;
+  font-size: 1.750rem;
+  font-family: 'Roboto Slab', serif;
+  font-weight: bold;
+}
+
+.book-author {
+  color: #4386bf;
+  font-weight: 300;
+  font-family: 'Roboto Slab', serif;
+}
+
+.buttons {
+  width: 100%;
+  display: flex;
+}
+
+.info-btn {
+  width: 5rem;
+  margin-right: 1rem;
+  background-color: transparent;
+  border: none;
+  color: #4386bf;
+  font-weight: 600;
+  font-family: 'Roboto Slab', serif;
+  border-right: 2px solid #e8e8e8;
+}
+
+
+
+
+
+
+
 
 .addBookForm {
   display: flex;

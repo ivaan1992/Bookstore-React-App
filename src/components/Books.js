@@ -12,13 +12,14 @@ const Books = () => {
   }, []);
   return (
     <>
-      <h1>Books Section</h1>
-      <ul>
-        {BookList.map((book) => (
-          <Card key={book.name} book={book} />
-        ))}
-      </ul>
-      <Form />
+      <div className="booksBody">
+        <ul>
+          {BookList.map((book) => (
+            <Card key={book.name} book={book} />
+          ))}
+        </ul>
+        <Form />
+      </div>
     </>
   );
 };

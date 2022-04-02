@@ -12,16 +12,22 @@ const Card = (props) => {
   };
 
   return (
-    <li className="bookInfo">
-      <p>{book.name}</p>
-      <p>{book.author}</p>
-      <p>{book.category}</p>
-      <p>{book.id}</p>
-
-      <button type="button" onClick={handleRemoveBook}>
-        Remove Book
-      </button>
-    </li>
+    <div className="card-complete">
+      <div className="info">
+        <li className="bookInfo">
+          <p className="book-category">{book.category}</p>
+          <h1 className="book-title">{book.name}</h1>
+          <p className="book-author">{book.author}</p>
+        </li>
+        <div className="buttons">
+          <button type="button" className="info-btn">Comments</button>
+          <button type="button" onClick={handleRemoveBook} className="info-btn">
+            Remove
+          </button>
+          <button type="button" className="info-btn">Edit</button>
+        </div>
+      </div>
+    </div>
   );
 };
 
