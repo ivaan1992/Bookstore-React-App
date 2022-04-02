@@ -45,7 +45,7 @@ export const addBooksAsync = (bookProps) => (dispatch) => {
 
   const ApiBook = {
     item_id: id,
-    name: `${name}`,
+    title: `${name}`,
     author: `${author}`,
     category: `${category}`,
   };
