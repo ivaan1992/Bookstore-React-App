@@ -134,6 +134,73 @@ header {
   border-right: 2px solid #e8e8e8;
 }
 
+.wrapper {
+  width: 100px;
+  height: 100px;
+  clip: rect(0, 100px, 100px, 50px);
+  position: relative;
+  left: -96%;
+}
+
+.circle {
+  width: 80px;
+  height: 80px;
+  border: 10px solid #4386bf;
+  border-radius: 50px;
+  position: absolute;
+}
+
+div[data-anim~=base] {
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-timing-function: linear;
+}
+
+.wrapper[data-anim~=wrapper] {
+  animation-duration: 0.01s;
+  animation-delay: 1s;
+  animation-name: close-wrapper;
+  position: relative;
+  left: 0;
+}
+
+.pres {
+  width: 2.938rem;
+  height: 2.438rem;
+  margin: 0.063rem 7.063rem 0 0.688rem;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2rem;
+  color: #121212;
+}
+
+.presentage {
+  flex-direction: column;
+  width: 50%;
+}
+
+.left {
+  margin-top: 20px;
+  width: auto;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10%;
+  background-color: transparent;
+}
+
+.completed {
+  opacity: 0.5;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.875rem;
+  font-weight: 800;
+  color: #868383;
+  margin-bottom: 10px;
+}
+
+.d-flex {
+  display: flex;
+}
+
+
 
 
 
