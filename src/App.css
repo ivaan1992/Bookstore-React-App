@@ -83,15 +83,15 @@ header {
   background-color: #fff;
   display: flex;
   justify-content: space-between;
-  border: 3px solid black;
   margin-bottom: 1.250rem;
+  border: 1px solid #e8e8e8;
 }
 
 .info {
-  width: 35%;
-  border: 3px solid blue;
+  width: 45%;
   display: flex;
   flex-direction: column;
+  padding-left: 2rem;
   justify-content: center;
 }
 
@@ -200,9 +200,48 @@ div[data-anim~=base] {
   display: flex;
 }
 
+.border {
+  width: 30vw;
+  height: 20vh;
+  border-left: 1px solid gray;
+  flex-direction: column;
+  margin-right: 30px;
+  align-items: center;
+  justify-content: center;
+}
 
+.lesson {
+  font-family: 'Roboto Slab', serif;
+  font-size: 1rem;
+  font-weight: 300;
+  margin-bottom: 40px;
+}
 
+.Remove {
+  width: 10rem;
+  height: 5vh;
+  background-color: #0290ff;
+  color: #fff;
+  border-radius: 3px;
+  border: none;
+  font-family: 'Roboto Slab', serif;
+}
 
+.chapter {
+  font-family: 'Roboto Slab', serif;
+  width: 20rem;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.progress {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  justify-content: center;
+  align-items: center;
+}
 
 
 

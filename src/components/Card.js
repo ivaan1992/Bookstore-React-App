@@ -42,6 +42,11 @@ const Card = (props) => {
           </div>
         </div>
       </div>
+      <div className="progress">
+        <h4>CURRENT CHAPTER</h4>
+        <span className="lesson">Chapter 17</span>
+        <button className="Remove" type="button">Update progress</button>
+      </div>
     </div>
   );
 };
