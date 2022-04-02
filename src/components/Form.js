@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { addBookAsync } from '../redux/books/books';
+import { addBooksAsync } from '../redux/books/books';
 import '../App.css';
 
 const Form = () => {
@@ -13,13 +13,18 @@ const Form = () => {
   const handleAuthor = (event) => {
     setAuthor(event.target.value);
   };
+  const [category, setCategory] = useState('');
+  const handleCategory = (event) => {
+    setCategory(event.target.value);
+  };
   const handleAddBook = () => {
     const newBook = {
       name: title,
       author,
+      category,
       id: Math.ceil(Math.random() * 10000),
     };
-    dispatch(addBookAsync(newBook));
+    dispatch(addBooksAsync(newBook));
   };
   return (
     <>
@@ -37,6 +42,13 @@ const Form = () => {
           placeholder="Author"
           value={author}
           onChange={handleAuthor}
+        />
+        <input
+          type="text"
+          id="category"
+          placeholder="Category"
+          value={category}
+          onChange={handleCategory}
         />
         <button type="button" onClick={handleAddBook}>
           Add book

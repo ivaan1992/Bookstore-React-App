@@ -11,7 +11,7 @@ export default class booksApi {
     };
 
     static addBooksToApi = async (data) => {
-      const url = `${this.BASE_URL}/apps/${this.ID}/books`;
+      const url = `${this.BASE}/apps/${this.ID}/books`;
       const response = await fetch(url, {
         method: 'POST',
         headers: {
@@ -23,7 +23,7 @@ export default class booksApi {
     };
 
     static deleteBooksFromApi = async (id) => {
-      const url = `${this.BASE_URL}/apps/${this.ID}/books/${id}`;
+      const url = `${this.BASE}/apps/${this.ID}/books/${id}`;
       const response = await fetch(url, {
         method: 'DELETE',
       });

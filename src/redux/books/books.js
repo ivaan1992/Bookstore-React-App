@@ -4,23 +4,7 @@ const ADD_BOOK = 'bookstore/books/ADD_BOOK';
 const REMOVE_BOOK = 'bookstore/books/REMOVE_BOOK';
 const SET_ALL_BOOKS = 'bookstore/books/SET_ALL_BOOKS';
 
-const initialState = [
-  /* {
-    id: 1,
-    name: 'The picture of Dorian Gray',
-    author: 'Oscar Wilde',
-  },
-  {
-    id: 2,
-    name: 'Romeo & Juliet',
-    author: 'Shakespeare',
-  },
-  {
-    id: 3,
-    name: 'The Hunger Games',
-    author: 'Suzanne Collins',
-  }, */
-];
+const initialState = [];
 
 export const addBook = (payload) => ({
   type: ADD_BOOK,
@@ -41,12 +25,12 @@ export const setAllBooksFromApi = (dispatch) => {
   booksApi.getBooksFromApi().then((data) => {
     const books = [];
     Object.entries(data).forEach(([id, info]) => {
-      const { name: ApiTitle } = info[0];
-      const [name, author] = ApiTitle.split('-');
+      const { title: name, author, category } = info[0];
       const addNewBooks = {
         id,
         name,
         author,
+        category,
       };
       books.push(addNewBooks);
     });
@@ -70,7 +54,7 @@ export const addBooksAsync = (bookProps) => (dispatch) => {
 
 export const removeBooksAsync = (id) => (dispatch) => {
   booksApi.deleteBooksFromApi(id).then(() => dispatch(removeBook(id)));
-}
+};
 
 const bookReducer = (state = initialState, action) => {
   switch (action.type) {
