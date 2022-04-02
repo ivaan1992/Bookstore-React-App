@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { addBook } from '../redux/books/books';
+import { addBookAsync } from '../redux/books/books';
 import '../App.css';
 
 const Form = () => {
@@ -19,7 +19,7 @@ const Form = () => {
       author,
       id: Math.ceil(Math.random() * 10000),
     };
-    dispatch(addBook(newBook));
+    dispatch(addBookAsync(newBook));
   };
   return (
     <>
