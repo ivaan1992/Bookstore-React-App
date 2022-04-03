@@ -136,6 +136,7 @@ header {
   font-weight: 600;
   font-family: 'Roboto Slab', serif;
   border-right: 2px solid #e8e8e8;
+  cursor: pointer;
 }
 
 .wrapper {
@@ -229,6 +230,7 @@ div[data-anim~=base] {
   border-radius: 3px;
   border: none;
   font-family: 'Roboto Slab', serif;
+  cursor: pointer;
 }
 
 .chapter {
@@ -278,6 +280,7 @@ input {
   font-weight: 700;
   border-radius: 3px;
   border: none;
+  cursor: pointer;
 }
 
 ::placeholder {
