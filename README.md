@@ -11,8 +11,6 @@ You have to make it with React and Redux.
 
 
 
-
-
 The purpose of this project is show my abilities making projects with React. 
 ## Built With
 
@@ -21,6 +19,10 @@ The purpose of this project is show my abilities making projects with React.
 - JavaScript
 - React
  
+
+ ##Live Demo
+
+ <a href="https://deploy-preview-5--melodic-stroopwafel-a62743.netlify.app/">Live Demo</a>
 
 ## Getting Started 
 
