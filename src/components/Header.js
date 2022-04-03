@@ -6,14 +6,14 @@ import '../App.css';
 
 const Header = () => (
   <header>
-    <div className="headerContent">
-      <div className="titleLinks">
-        <ul className="header-links">
+    <div className="headerContent d-flex blue">
+      <div className="titleLinks d-flex">
+        <ul className="header-links d-flex">
           <h2>Bookstore CMS</h2>
-          <li>
+          <li className="d-flex">
             <Link to="/">Books</Link>
           </li>
-          <li>
+          <li className="d-flex">
             <Link to="/categories">Categories</Link>
           </li>
         </ul>

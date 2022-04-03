@@ -11,19 +11,19 @@ const Card = (props) => {
   };
 
   return (
-    <div className="card-complete">
-      <div className="info">
-        <li className="bookInfo">
+    <div className="card-complete d-flex">
+      <div className="info d-flex">
+        <li className="bookInfo d-flex">
           <p className="book-category">{book.category}</p>
-          <h1 className="book-title">{book.name}</h1>
-          <p className="book-author">{book.author}</p>
+          <h1 className="book-title roboto">{book.name}</h1>
+          <p className="book-author roboto">{book.author}</p>
         </li>
-        <div className="buttons">
-          <button type="button" className="info-btn">Comments</button>
-          <button type="button" onClick={handleRemoveBook} className="info-btn">
+        <div className="buttons d-flex">
+          <button type="button" className="info-btn roboto">Comments</button>
+          <button type="button" onClick={handleRemoveBook} className="info-btn roboto">
             Remove
           </button>
-          <button type="button" className="info-btn">Edit</button>
+          <button type="button" className="info-btn roboto">Edit</button>
         </div>
       </div>
       <div className="left d-flex">
@@ -43,9 +43,9 @@ const Card = (props) => {
         </div>
       </div>
       <div className="progress">
-        <h4>CURRENT CHAPTER</h4>
-        <span className="lesson">Chapter 17</span>
-        <button className="Remove" type="button">Update progress</button>
+        <h4 className="roboto">CURRENT CHAPTER</h4>
+        <span className="lesson roboto">Chapter 17</span>
+        <button className="Remove roboto" type="button">Update progress</button>
       </div>
     </div>
   );
