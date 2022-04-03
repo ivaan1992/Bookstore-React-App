@@ -28,32 +28,47 @@ const Form = () => {
   };
   return (
     <>
-      <form className="addBookForm">
-        <input
-          type="text"
-          id="book"
-          placeholder="Book Title"
-          value={title}
-          onChange={handleChange}
-        />
-        <input
-          type="text"
-          id="author"
-          placeholder="Author"
-          value={author}
-          onChange={handleAuthor}
-        />
-        <input
-          type="text"
-          id="category"
-          placeholder="Category"
-          value={category}
-          onChange={handleCategory}
-        />
-        <button type="button" onClick={handleAddBook}>
-          Add book
-        </button>
-      </form>
+      <div className="form d-flex">
+        <h2>ADD NEW BOOK</h2>
+        <form className="addBookForm d-flex">
+          <div className="d-flex">
+            <input
+              type="text"
+              id="book"
+              placeholder="Book Title"
+              value={title}
+              onChange={handleChange}
+            />
+            <input
+              type="text"
+              id="author"
+              placeholder="Author"
+              value={author}
+              onChange={handleAuthor}
+            />
+          </div>
+
+          <select
+            id="category"
+            placeholder="Category"
+            value={category}
+            onChange={handleCategory}
+          >
+            <option value={category}>Drama</option>
+            <option value={category}>Action</option>
+            <option value={category}>Fiction</option>
+            <option value={category}>Horror</option>
+            <option value={category}>Romance</option>
+          </select>
+          <button
+            type="button"
+            onClick={handleAddBook}
+            className="Add"
+          >
+            Add book
+          </button>
+        </form>
+      </div>
     </>
   );
 };
